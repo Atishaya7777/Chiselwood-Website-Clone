@@ -1,0 +1,446 @@
+@import "../abstract/colors";
+@import "../abstract/typography";
+
+// Content container
+.content {
+  padding: 120px 80px 60px;
+  justify-content: left;
+  text-align: left;
+  width: 100%;
+  font-weight: $bodyFontWeight;
+
+  // Open content starts from here
+
+  .open {
+    margin-bottom: 18.5rem;
+
+    p {
+      font-size: $bodyFontSize;
+      letter-spacing: $bodyLetterSpacing;
+      text-align: center;
+      line-height: $bodyLineHeight;
+      width: 65%;
+      font-weight: $bodyFontWeight;
+    }
+  }
+
+  // About content starts from here
+  .about {
+    display: flex;
+    border: none;
+    position: relative;
+    margin-bottom: $divBotMargin;
+
+    .about-img_container {
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        transparent,
+        rgba(0, 0, 0, 2)
+      );
+      height: 419px;
+      width: 420px;
+      position: relative;
+
+      img {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        height: auto;
+        width: auto;
+      }
+
+      span {
+        position: absolute;
+        bottom: 30px;
+        right: 50px;
+      }
+
+      a {
+        display: flex;
+        font-size: 0.85rem;
+        font-weight: 510;
+        line-height: 0.85rem;
+        letter-spacing: $bodyLetterSpacing;
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+      }
+
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .about_text {
+      position: absolute;
+      top: -20%;
+      left: 45%;
+      font-weight: $bodyFontWeight;
+
+      h3 {
+        color: $titleColor;
+        font-size: $titleFontSize;
+        font-weight: $titleFontWeight;
+        padding-bottom: $titlePaddingBot;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+        padding: 0px;
+        padding-bottom: 30px;
+      }
+
+      p {
+        font-size: $bodyFontSize;
+        text-align: left;
+        line-height: $bodyLineHeight;
+        font-weight: $bodyFontWeight;
+      }
+    }
+  }
+
+  .about-example-img_container {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      transparent,
+      rgba(0, 0, 0, 2)
+    );
+    height: 520px;
+    width: 780px;
+    position: relative;
+    margin-bottom: $divBotMargin;
+
+    img {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      height: auto;
+      width: auto;
+    }
+
+    span {
+      position: absolute;
+      bottom: 30px;
+      right: 50px;
+    }
+
+    a {
+      display: flex;
+      font-size: 0.85rem;
+      font-weight: 510;
+      line-height: 0.85rem;
+      letter-spacing: $bodyLetterSpacing;
+      color: inherit;
+      text-decoration: none;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Portfolio content starts from here
+  .portfolio {
+    display: grid;
+    grid-gap: $gridRowGap $girdColGap;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 200px;
+
+    h3 {
+      font-family: $headingFontFamily;
+      color: #f08020;
+      font-size: 2.5rem;
+    }
+
+    // First content left side
+    .portfolio_extension {
+      border-bottom: 2px solid #494d60;
+      max-width: 100%;
+
+      a {
+        text-decoration: none;
+      }
+
+      span,
+      i {
+        line-height: 1.2;
+        width: 75px;
+        visibility: hidden;
+        background: red;
+        color: white;
+        padding: 0px 5px 0px 5px;
+        position: absolute;
+        border-radius: 5px;
+      }
+
+      .portfolio_extension-image {
+        position: relative;
+      }
+
+      .extension-text_container {
+        padding: 30px 50px;
+        line-height: 4rem;
+
+        .extension_heading {
+          padding-bottom: 50px;
+        }
+
+        .extension_footer-text1 {
+          padding: 200px 0px 0px 0px;
+          line-height: 2rem;
+          font-weight: bold;
+          color: #fff;
+        }
+
+        .extension_footer-text2 {
+          color: #494d60;
+        }
+      }
+    }
+
+    //second content right side
+    .portfolio_manorhouse {
+      border-top: 2px solid #494d60;
+      max-width: 100%;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      i {
+        line-height: 1.2;
+        width: 75px;
+        visibility: hidden;
+        background: red;
+        color: white;
+        padding: 0px 5px 0px 5px;
+        position: absolute;
+        border-radius: 5px;
+        left: 5px;
+        top: 5px;
+      }
+
+      .manorhouse-text_container {
+        padding: 30px 50px;
+        line-height: 4rem;
+
+        .manorhouse_header-text1 {
+          line-height: 2rem;
+          color: #fff;
+          font-weight: bold;
+        }
+
+        .manorhouse_header-text2 {
+          color: #494d60;
+        }
+      }
+
+      .portfolio_manorhouse-image {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .portfolio_barn {
+      border-bottom: 2px solid #494d60;
+      max-width: 100%;
+
+      a {
+        text-decoration: none;
+      }
+
+      span,
+      i {
+        line-height: 1.2;
+        width: 75px;
+        visibility: hidden;
+        background: red;
+        color: white;
+        padding: 0px 5px 0px 5px;
+        position: absolute;
+        border-radius: 5px;
+      }
+
+      .portfolio_barn-image {
+        position: relative;
+      }
+
+      .barn-text_container {
+        padding: 200px 50px 30px 50px;
+        line-height: 4rem;
+
+        .barn_footer-text1 {
+          padding: 60px 0px 0px 0px;
+          line-height: 2rem;
+          font-weight: bold;
+          color: #fff;
+        }
+
+        .barn_footer-text2 {
+          color: #494d60;
+        }
+      }
+    }
+
+    .portfolio_simple {
+      border-top: 2px solid #494d60;
+      max-width: 100%;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 0;
+      }
+
+      i {
+        line-height: 1.2;
+        width: 75px;
+        visibility: hidden;
+        background: red;
+        color: white;
+        padding: 0px 5px 0px 5px;
+        position: absolute;
+        border-radius: 5px;
+        left: 5px;
+        top: 5px;
+      }
+
+      .simple-text_container {
+        padding: 30px 50px;
+        line-height: 4rem;
+
+        .simple_header-text1 {
+          line-height: 2rem;
+          color: #fff;
+          font-weight: bold;
+        }
+
+        .simple_header-text2 {
+          color: #494d60;
+        }
+      }
+
+      .portfolio_simple-image {
+        position: absolute;
+        bottom: 0;
+        height: 470px;
+      }
+    }
+  }
+
+  // Award winning design and experience section starts here
+  .award-experience {
+    display: flex;
+    border: none;
+    position: relative;
+    margin-bottom: $divBotMargin;
+
+    .award_image-container {
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        transparent,
+        rgba(0, 0, 0, 2)
+      );
+      height: 420px;
+      width: 419px;
+      position: relative;
+
+      img {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        height: auto;
+        width: auto;
+      }
+
+      span {
+        position: absolute;
+        bottom: 30px;
+        right: 50px;
+      }
+
+      a {
+        display: flex;
+        font-size: 0.85rem;
+        font-weight: 510;
+        line-height: 0.85rem;
+        letter-spacing: $bodyLetterSpacing;
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+      }
+
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .award_text-container {
+      font-weight: $bodyFontWeight;
+      width: calc(100% - 420px);
+      padding-right: 100px;
+    }
+    h3 {
+      color: $titleColor;
+      font-size: $titleFontSize;
+      font-weight: $titleFontWeight;
+      padding-bottom: $titlePaddingBot;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      padding: 0px;
+      padding-bottom: 30px;
+      width: 50%;
+    }
+
+    p {
+      font-size: $bodyFontSize;
+      line-height: $bodyLineHeight;
+      font-weight: $bodyFontWeight;
+    }
+  }
+  // hover pseudo-elements starts here
+  // hover of hyperlinked text
+  .portfolio_extension:hover,
+  .portfolio_manorhouse:hover,
+  .portfolio_barn:hover,
+  .portfolio_simple:hover {
+    width: 100%;
+    background: #1a2128;
+  }
+
+  // hover of pinterest pin in the images
+  .portfolio_extension-image:hover,
+  .portfolio_barn-image:hover {
+    i,
+    span {
+      visibility: visible;
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  .portfolio_manorhouse-image:hover,
+  .portfolio_simple-image:hover {
+    i {
+      visibility: visible;
+    }
+  }
+}

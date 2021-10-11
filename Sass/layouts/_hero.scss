@@ -1,0 +1,52 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: sliderAnimate 45s ease infinite 0s;
+    opacity: 0;
+    transform: scale(1.5);
+
+    @for $num from 1 through 5 {
+      &:nth-of-type(#{$num}) {
+        animation-delay: ($num - 1) * 9s;
+      }
+    }
+  }
+}
+@keyframes sliderAnimate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  5%,
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) translateX(-500px);
+  }
+}

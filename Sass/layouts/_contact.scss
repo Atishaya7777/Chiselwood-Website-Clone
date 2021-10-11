@@ -1,0 +1,109 @@
+.contact-section {
+  background: #484d60;
+  display: flex;
+  justify-content: left;
+
+  .c-example {
+    background: white;
+    color: black;
+    position: relative;
+    justify-content: center;
+
+    .company-details {
+      ul {
+        list-style-type: none;
+        li {
+          line-height: $bodyLineHeight;
+          letter-spacing: $bodyLetterSpacing;
+          font-size: 1.3rem;
+
+          a {
+            color: black;
+            text-decoration-style: dotted;
+          }
+          a:hover {
+            color: #f5931d;
+            text-decoration: black;
+          }
+        }
+
+        p {
+          font-size: 2.5rem;
+          font-family: $headingFontFamily;
+          padding-bottom: 60px;
+        }
+      }
+    }
+  }
+
+  .contact-form-details {
+    background: #484d60;
+    padding: 50px 0px 50px 0px;
+    width: calc(55% + 3.5px);
+
+    input {
+      height: 50px;
+      width: calc(95% - 40px);
+      font-family: inherit;
+      font-size: inherit;
+      margin: 10px 40px;
+      padding: 30px;
+    }
+
+    textarea {
+      width: calc(95% - 40px);
+      font-family: inherit;
+      font-size: inherit;
+      margin: 20px 40px;
+      padding: 50px;
+    }
+
+    ::placeholder {
+    }
+
+    .contact-button {
+      background: #1d262d;
+      width: 30%;
+      margin-left: 65%;
+      position: relative;
+
+      .plus {
+        font-size: 2rem;
+        transition: transform 0.8s ease;
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 12px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: white;
+        padding: 15px 5px;
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: #f6931d;
+      }
+
+      &:hover .plus {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border: 3px solid 6px rgb(213, 236, 245);
+    color: #47474b;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

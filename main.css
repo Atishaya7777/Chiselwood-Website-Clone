@@ -1,0 +1,773 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: #1d252d;
+  color: #d8d8d8;
+  font-size: 1.25rem;
+  letter-spacing: 0.7px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body p {
+  line-height: 2.4rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "MuseoModerno", cursive;
+  font-size: 5rem;
+  padding: 30px 0px 15px 40px;
+  color: #fff;
+}
+
+.plus {
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.side-button p {
+  position: fixed;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1rem;
+  color: white;
+  background-color: #494d60;
+  padding: 15px 5px;
+}
+
+.side-button:hover p {
+  background-color: #f6931d;
+}
+
+.side-button:hover .plus {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  background-color: #f6931d;
+}
+
+.navbar-container {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+}
+
+.navbar-container ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-container li {
+  position: relative;
+  word-spacing: 1px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.navbar-container .navbar-logo:hover {
+  background: transparent;
+}
+
+.navbar-container .navbar-logo {
+  padding: 20px 10px;
+}
+
+.navbar-container .text {
+  font-size: 2.3rem;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+}
+
+.navbar-container a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  padding: 40px 10px;
+}
+
+.navbar-container a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(transparent));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+}
+
+.hero-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: sliderAnimate 45s ease infinite 0s;
+          animation: sliderAnimate 45s ease infinite 0s;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.hero-container img:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.hero-container img:nth-of-type(2) {
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.hero-container img:nth-of-type(3) {
+  -webkit-animation-delay: 18s;
+          animation-delay: 18s;
+}
+
+.hero-container img:nth-of-type(4) {
+  -webkit-animation-delay: 27s;
+          animation-delay: 27s;
+}
+
+.hero-container img:nth-of-type(5) {
+  -webkit-animation-delay: 36s;
+          animation-delay: 36s;
+}
+
+@-webkit-keyframes sliderAnimate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  5%,
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translateX(-500px);
+            transform: scale(1) translateX(-500px);
+  }
+}
+
+@keyframes sliderAnimate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  5%,
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translateX(-500px);
+            transform: scale(1) translateX(-500px);
+  }
+}
+
+.content {
+  padding: 120px 80px 60px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+  width: 100%;
+  font-weight: lighter;
+}
+
+.content .open {
+  margin-bottom: 18.5rem;
+}
+
+.content .open p {
+  font-size: 1.25rem;
+  letter-spacing: 0.7px;
+  text-align: center;
+  line-height: 2.4rem;
+  width: 65%;
+  font-weight: lighter;
+}
+
+.content .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  position: relative;
+  margin-bottom: 7rem;
+}
+
+.content .about .about-img_container {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(transparent), to(black));
+  background: linear-gradient(to bottom, transparent, transparent, black);
+  height: 419px;
+  width: 420px;
+  position: relative;
+}
+
+.content .about .about-img_container img {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.content .about .about-img_container span {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+.content .about .about-img_container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: 510;
+  line-height: 0.85rem;
+  letter-spacing: 0.7px;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.content .about .about-img_container:hover span {
+  text-decoration: underline;
+}
+
+.content .about .about_text {
+  position: absolute;
+  top: -20%;
+  left: 45%;
+  font-weight: lighter;
+}
+
+.content .about .about_text h3 {
+  color: #748383;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  padding-bottom: 30px;
+}
+
+.content .about .about_text h2 {
+  font-size: 3.5rem;
+  padding: 0px;
+  padding-bottom: 30px;
+}
+
+.content .about .about_text p {
+  font-size: 1.25rem;
+  text-align: left;
+  line-height: 2.4rem;
+  font-weight: lighter;
+}
+
+.content .about-example-img_container {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(transparent), to(black));
+  background: linear-gradient(to bottom, transparent, transparent, black);
+  height: 520px;
+  width: 780px;
+  position: relative;
+  margin-bottom: 7rem;
+}
+
+.content .about-example-img_container img {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.content .about-example-img_container span {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+.content .about-example-img_container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: 510;
+  line-height: 0.85rem;
+  letter-spacing: 0.7px;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.content .about-example-img_container:hover span {
+  text-decoration: underline;
+}
+
+.content .portfolio {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 100px 50px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 200px;
+}
+
+.content .portfolio h3 {
+  font-family: "MuseoModerno", cursive;
+  color: #f08020;
+  font-size: 2.5rem;
+}
+
+.content .portfolio .portfolio_extension {
+  border-bottom: 2px solid #494d60;
+  max-width: 100%;
+}
+
+.content .portfolio .portfolio_extension a {
+  text-decoration: none;
+}
+
+.content .portfolio .portfolio_extension span,
+.content .portfolio .portfolio_extension i {
+  line-height: 1.2;
+  width: 75px;
+  visibility: hidden;
+  background: red;
+  color: white;
+  padding: 0px 5px 0px 5px;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.content .portfolio .portfolio_extension .portfolio_extension-image {
+  position: relative;
+}
+
+.content .portfolio .portfolio_extension .extension-text_container {
+  padding: 30px 50px;
+  line-height: 4rem;
+}
+
+.content .portfolio .portfolio_extension .extension-text_container .extension_heading {
+  padding-bottom: 50px;
+}
+
+.content .portfolio .portfolio_extension .extension-text_container .extension_footer-text1 {
+  padding: 200px 0px 0px 0px;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.content .portfolio .portfolio_extension .extension-text_container .extension_footer-text2 {
+  color: #494d60;
+}
+
+.content .portfolio .portfolio_manorhouse {
+  border-top: 2px solid #494d60;
+  max-width: 100%;
+  position: relative;
+}
+
+.content .portfolio .portfolio_manorhouse a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content .portfolio .portfolio_manorhouse i {
+  line-height: 1.2;
+  width: 75px;
+  visibility: hidden;
+  background: red;
+  color: white;
+  padding: 0px 5px 0px 5px;
+  position: absolute;
+  border-radius: 5px;
+  left: 5px;
+  top: 5px;
+}
+
+.content .portfolio .portfolio_manorhouse .manorhouse-text_container {
+  padding: 30px 50px;
+  line-height: 4rem;
+}
+
+.content .portfolio .portfolio_manorhouse .manorhouse-text_container .manorhouse_header-text1 {
+  line-height: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.content .portfolio .portfolio_manorhouse .manorhouse-text_container .manorhouse_header-text2 {
+  color: #494d60;
+}
+
+.content .portfolio .portfolio_manorhouse .portfolio_manorhouse-image {
+  position: absolute;
+  bottom: 0;
+}
+
+.content .portfolio .portfolio_barn {
+  border-bottom: 2px solid #494d60;
+  max-width: 100%;
+}
+
+.content .portfolio .portfolio_barn a {
+  text-decoration: none;
+}
+
+.content .portfolio .portfolio_barn span,
+.content .portfolio .portfolio_barn i {
+  line-height: 1.2;
+  width: 75px;
+  visibility: hidden;
+  background: red;
+  color: white;
+  padding: 0px 5px 0px 5px;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.content .portfolio .portfolio_barn .portfolio_barn-image {
+  position: relative;
+}
+
+.content .portfolio .portfolio_barn .barn-text_container {
+  padding: 200px 50px 30px 50px;
+  line-height: 4rem;
+}
+
+.content .portfolio .portfolio_barn .barn-text_container .barn_footer-text1 {
+  padding: 60px 0px 0px 0px;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.content .portfolio .portfolio_barn .barn-text_container .barn_footer-text2 {
+  color: #494d60;
+}
+
+.content .portfolio .portfolio_simple {
+  border-top: 2px solid #494d60;
+  max-width: 100%;
+  position: relative;
+}
+
+.content .portfolio .portfolio_simple a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0;
+}
+
+.content .portfolio .portfolio_simple i {
+  line-height: 1.2;
+  width: 75px;
+  visibility: hidden;
+  background: red;
+  color: white;
+  padding: 0px 5px 0px 5px;
+  position: absolute;
+  border-radius: 5px;
+  left: 5px;
+  top: 5px;
+}
+
+.content .portfolio .portfolio_simple .simple-text_container {
+  padding: 30px 50px;
+  line-height: 4rem;
+}
+
+.content .portfolio .portfolio_simple .simple-text_container .simple_header-text1 {
+  line-height: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.content .portfolio .portfolio_simple .simple-text_container .simple_header-text2 {
+  color: #494d60;
+}
+
+.content .portfolio .portfolio_simple .portfolio_simple-image {
+  position: absolute;
+  bottom: 0;
+  height: 470px;
+}
+
+.content .award-experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  position: relative;
+  margin-bottom: 7rem;
+}
+
+.content .award-experience .award_image-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(transparent), to(black));
+  background: linear-gradient(to bottom, transparent, transparent, black);
+  height: 420px;
+  width: 419px;
+  position: relative;
+}
+
+.content .award-experience .award_image-container img {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.content .award-experience .award_image-container span {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+.content .award-experience .award_image-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: 510;
+  line-height: 0.85rem;
+  letter-spacing: 0.7px;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.content .award-experience .award_image-container:hover span {
+  text-decoration: underline;
+}
+
+.content .award-experience .award_text-container {
+  font-weight: lighter;
+  width: calc(100% - 420px);
+  padding-right: 100px;
+}
+
+.content .award-experience h3 {
+  color: #748383;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  padding-bottom: 30px;
+}
+
+.content .award-experience h2 {
+  font-size: 3.5rem;
+  padding: 0px;
+  padding-bottom: 30px;
+  width: 50%;
+}
+
+.content .award-experience p {
+  font-size: 1.25rem;
+  line-height: 2.4rem;
+  font-weight: lighter;
+}
+
+.content .portfolio_extension:hover,
+.content .portfolio_manorhouse:hover,
+.content .portfolio_barn:hover,
+.content .portfolio_simple:hover {
+  width: 100%;
+  background: #1a2128;
+}
+
+.content .portfolio_extension-image:hover i,
+.content .portfolio_extension-image:hover span,
+.content .portfolio_barn-image:hover i,
+.content .portfolio_barn-image:hover span {
+  visibility: visible;
+  top: 5px;
+  left: 5px;
+}
+
+.content .portfolio_manorhouse-image:hover i,
+.content .portfolio_simple-image:hover i {
+  visibility: visible;
+}
+
+.contact-section {
+  background: #484d60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.contact-section .c-example {
+  background: white;
+  color: black;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-section .c-example .company-details ul {
+  list-style-type: none;
+}
+
+.contact-section .c-example .company-details ul li {
+  line-height: 2.4rem;
+  letter-spacing: 0.7px;
+  font-size: 1.3rem;
+}
+
+.contact-section .c-example .company-details ul li a {
+  color: black;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.contact-section .c-example .company-details ul li a:hover {
+  color: #f5931d;
+  -webkit-text-decoration: black;
+          text-decoration: black;
+}
+
+.contact-section .c-example .company-details ul p {
+  font-size: 2.5rem;
+  font-family: "MuseoModerno", cursive;
+  padding-bottom: 60px;
+}
+
+.contact-section .contact-form-details {
+  background: #484d60;
+  padding: 50px 0px 50px 0px;
+  width: calc(55% + 3.5px);
+}
+
+.contact-section .contact-form-details input {
+  height: 50px;
+  width: calc(95% - 40px);
+  font-family: inherit;
+  font-size: inherit;
+  margin: 10px 40px;
+  padding: 30px;
+}
+
+.contact-section .contact-form-details textarea {
+  width: calc(95% - 40px);
+  font-family: inherit;
+  font-size: inherit;
+  margin: 20px 40px;
+  padding: 50px;
+}
+
+.contact-section .contact-form-details .contact-button {
+  background: #1d262d;
+  width: 30%;
+  margin-left: 65%;
+  position: relative;
+}
+
+.contact-section .contact-form-details .contact-button .plus {
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 12px;
+}
+
+.contact-section .contact-form-details .contact-button p {
+  font-size: 1rem;
+  color: white;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+.contact-section .contact-form-details .contact-button:hover {
+  background-color: #f6931d;
+}
+
+.contact-section .contact-form-details .contact-button:hover .plus {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus,
+.contact-section select:focus {
+  outline: none;
+  border: 3px solid 6px #d5ecf5;
+  color: #47474b;
+}
+
+.contact-section input::-webkit-outer-spin-button,
+.contact-section input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */

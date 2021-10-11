@@ -1,0 +1,22 @@
+@keyframes FadeInOut {
+  0% {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 10;
+      transform: scale(1.5);
+    }
+  }
+  20% {
+    from {
+      opacity: 1;
+      background: $image-name2;
+    }
+    to {
+      opacity: 10;
+      background: $image-name2;
+    }
+  }
+}

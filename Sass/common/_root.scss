@@ -1,0 +1,70 @@
+@import "../abstract/colors";
+@import "../abstract/typography";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: $bodyBackgroundColor;
+  color: $textColor;
+  font-size: $bodyFontSize;
+  letter-spacing: $bodyLetterSpacing;
+
+  // Hide the scroll bar
+  overflow-y: scroll;
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // Internet Explorer 10+
+
+  p {
+    line-height: $bodyLineHeight;
+  }
+}
+
+// Hiding scroll bar continued
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+h1,
+h2,
+h4 {
+  font-family: $headingFontFamily;
+  font-size: $headingFontSize;
+  padding: 30px 0px 15px 40px;
+  color: $headingColor;
+}
+
+// Side button here
+.plus {
+  font-size: 2rem;
+  transition: transform 0.8s ease;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.side-button p {
+  position: fixed;
+  writing-mode: vertical-rl;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: white;
+  background-color: #494d60;
+  padding: 15px 5px;
+}
+
+.side-button:hover p {
+  background-color: #f6931d;
+}
+
+.side-button:hover .plus {
+  transform: rotate(360deg);
+  background-color: #f6931d;
+}
